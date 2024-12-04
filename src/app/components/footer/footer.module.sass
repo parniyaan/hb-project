@@ -1,0 +1,30 @@
+.footerContainer
+  //height: 400px
+  background-color: #0c0c0c
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 50px 200px
+
+  .map
+    width: 380px
+    height: 380px
+    border-radius: 50%
+
+  .information
+    display: flex
+
+    .informationList
+      list-style: none
+      &:not(:last-child)
+        margin-inline-end: 100px
+
+
+      .informationItems
+        &:not(:last-child)
+          margin-bottom: 5px
+
+      .informationHeader
+        font-weight: 900
+        font-size: 20px
+        margin-bottom: 20px

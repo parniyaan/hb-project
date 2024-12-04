@@ -1,0 +1,124 @@
+.navbar
+  width: 60%
+  height: 80px
+  position: fixed
+  top: 5%
+  left: 50%
+  transform: translateX(-50%)
+  z-index: 5
+  background-color: rgba(0, 0, 0, 0.8)
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin: 0 auto
+  color: white
+  text-align: center
+  border-radius: 20px
+  padding: 0 50px
+
+  .logo
+    width: 90px
+    height: 50px
+
+  .list
+    display: flex
+    align-items: center
+    list-style: none
+
+    .listItems
+      font-size: 16px
+      cursor: pointer
+
+      &:hover .listItem
+        color: var(--primary-color)
+
+      &:not(:last-child)
+        margin-right: 30px
+
+      .listItem
+        color: #ffffff
+        text-decoration: none
+        display: flex
+        align-items: center
+
+        &:hover
+          color: var(--primary-color)
+
+      .menuIcons
+        display: none
+
+@media (max-width: 1087px)
+  .navbar
+    right: -120%
+    top: 0
+    height: 100vh
+    position: fixed
+    width: 30%
+    background-color: rgba(0, 0, 0, 0.9)
+    display: flex
+    flex-direction: column
+    justify-content: start
+    z-index: 4
+    padding: 50px 30px
+    align-items: end
+    transition: right 0.5s ease-in-out
+
+    .logo
+      margin-bottom: 50px
+      align-self: center
+
+    .list
+      display: flex
+      flex-direction: column
+
+      .listItems
+        margin: 0 0 10px 0 !important
+        align-self: end
+        font-size: 18px !important
+        font-weight: 900 !important
+        display: flex
+        align-items: center !important
+        padding: 15px 20px 15px 50px
+        border-radius: 20px
+
+        &:hover
+          border: .2px solid var(--primary-color)
+          color: var(--primary-color)
+
+        .menuIcons
+          display: flex !important
+          margin-left: 10px
+
+  .appeared
+    right: -50%
+
+@media (max-width: 860px)
+  .listItems
+    padding: 15px 10px 15px 20px !important
+
+  .listItem
+    font-size: 16px !important
+
+@media (max-width: 700px)
+  .navbar
+    width: 40% !important
+
+  .listItems
+    padding: 10px !important
+
+  .listItem
+    font-size: 14px !important
+
+@media (max-width: 480px)
+  .navbar
+    width: 50% !important
+
+  .listItem
+    font-size: 12px !important
+
+@media (max-width: 450px)
+  .navbar
+    width: 60% !important
+
+  .listItem
+    font-size: 12px !important
