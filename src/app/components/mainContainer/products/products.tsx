@@ -5,6 +5,7 @@ import Image from 'next/image';
 import styles from './products.module.sass';
 import Button from '@mui/material/Button';
 import carData from '@/app/data/cars';
+import Container from "@/app/components/container";
 
 function Products() {
     const [ShowProduct, setShowProduct] = useState(false);
@@ -16,7 +17,6 @@ function Products() {
     const displayedCars = showMore ? carData : carData.slice(0, 6);
 
     function handleProductClick(product: any) {
-        console.log(product);
         setSelectedCar(product);
         setShowProduct(!ShowProduct)
     }
@@ -24,49 +24,38 @@ function Products() {
 
     return (
         <main className={styles.productsSection} id="product">
-            <h1 className={styles.productsTitle}>محصولات</h1>
-            <ul className={styles.productsGrid}>
-                {displayedCars.map((car, index) => (
-                    <li
-                        key={index}
-                        onClick={() => handleProductClick(car)}
-                        className={styles.productCard}
-                    >
-                        <div className={styles.imageWrapper}>
-                            <Image
-                                src={car.src}
-                                alt={car.name}
-                                layout="fill"
-                                objectFit="cover"
-                                className={styles.productImage}
-                            />
-                        </div>
+            <Container className={styles.contaienr}>
+                <h2>محصولات</h2>
+                <ul>
+                    {displayedCars.map((car, index) => (
+                        <li
+                            key={index}
+                            onClick={() => handleProductClick(car)}
+                        >
+                            <div className={styles.imageWrapper}>
+                                <Image
+                                    src={car.src}
+                                    alt={car.name}
+                                    layout="fill"
+                                    objectFit="cover"
+                                    className={styles.productImage}
+                                />
+                            </div>
 
-                        <div className={styles.overlay}>
-                            <h1 className={styles.productName}>{car.name}</h1>
-                            <p className={styles.productDescription}>{car.description}</p>
-                        </div>
-                    </li>
-                ))}
-            </ul>
-            <Button
-                className={styles.showMore}
-                onClick={toggleShowMore}
-                variant="contained"
-                sx={{
-                    backgroundColor: 'var(--primary-color)',
-                    color: '#ffffff',
-                    margin: '50px 0 0 40px',
-                    padding: '10px 30px',
-                    transition: 'transform 0.3s ease',
-                    '&:hover': {
-                        backgroundColor: '#d19700',
-                        transform: 'scale(1.05)',
-                    },
-                }}
-            >
-                {showMore ? '...نمایش کمتر' : ' ...نمایش بیشتر'}
-            </Button>
+                            <div className={styles.overlay}>
+                                <h3 className={styles.productName}>{car.name}</h3>
+                                <p className={styles.productDescription}>{car.description}</p>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+                <Button
+                    onClick={toggleShowMore}
+                    variant="contained"
+                >
+                    {showMore ? '...نمایش کمتر' : ' ...نمایش بیشتر'}
+                </Button>
+            </Container>
         </main>
     );
 }

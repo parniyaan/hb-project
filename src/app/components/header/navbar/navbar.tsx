@@ -15,25 +15,25 @@ function Navbar({ burgerMenu }: { burgerMenu: boolean }) {
     return (
         <nav className={`${styles.navbar} ${burgerMenu ? "" : styles.appeared}`}>
             <Image src='/images/logo.png' alt="logo" className={styles.logo} width={50} height={50} />
-            <ul className={styles.list}>
-                <li className={styles.listItems}>
-                    <a href="#footer" className={styles.listItem}>تماس با ما</a>
+            <ul>
+                <li>
+                    <a href="#footer">تماس با ما</a>
                     <AddIcCallIcon className={styles.menuIcons} />
                 </li>
-                <li className={styles.listItems}>
-                    <a href="#aboutUs" className={styles.listItem}>درباره ی ما</a>
+                <li>
+                    <a href="#aboutUs">درباره ی ما</a>
                     <InfoIcon className={styles.menuIcons} />
                 </li>
-                <li className={styles.listItems}>
-                    <a href="#blog" className={styles.listItem}>بلاگ</a>
+                <li>
+                    <a href="#blog">بلاگ</a>
                     <NotesIcon className={styles.menuIcons} />
                 </li>
-                <li className={styles.listItems}>
-                    <a href="#product" className={styles.listItem}>محصولات</a>
+                <li>
+                    <a href="#product">محصولات</a>
                     <CategoryIcon className={styles.menuIcons} />
                 </li>
-                <li className={styles.listItems}>
-                    <Link href="/" className={styles.listItem}>صفحه اصلی</Link>
+                <li>
+                    <Link href="/">صفحه اصلی</Link>
                     <AddHomeIcon className={styles.menuIcons} />
                 </li>
             </ul>

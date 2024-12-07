@@ -1,102 +1,65 @@
-.aboutUsContainer
-  margin-top: 100px
-  align-items: center
-  padding: 0 50px
-
-.aboutUsTitle
-  font-size: 32px
-  margin-bottom: 30px
-  color: var(--primary-color)
-
 .aboutUs
-  display: flex
-  align-items: center
-  justify-content: space-between
+  margin-top: 200px
 
-  .aboutUsDes
-    font-size: 20px
-    line-height: 45px
-    width: 40%
-    letter-spacing: 1px
+  .container
+    h2
+      font-size: 32px
+      color: var(--primary-color)
 
-  .logo
-    width: 35%
-    object-fit: contain
-    height: auto
-    margin-left: 100px
-    position: relative
-    z-index: 1
+    div
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+      p
+        font-size: 20px
+        line-height: 45px
+        width: 40%
+        letter-spacing: 1px
+        flex: 1 0 0
+        margin-inline-end: 300px
 
 
-@media (max-width: 1600px)
-  .logo
-    width: 35% !important
+      img
+        width: 35%
+        object-fit: contain
+        height: auto
+        position: relative
+        flex: 1 0 0
 
-  .aboutUsTitle
-    font-size: 30px !important
-    margin-bottom: 50px !important
 
-  .aboutUsDes
-    font-size: 18px !important
-    line-height: 35px !important
+@media (max-width: 1500px)
+  .aboutUs
+    .container
+      div
+        p
+          margin-inline-end: 200px
+          line-height: 35px
 
-@media (max-width: 1485px)
-  .logo
-    width: 30% !important
 
-  .aboutUsTitle
-    font-size: 20px !important
-    margin-bottom: 50px !important
-
-@media (max-width: 1470px)
-  .aboutUsContainer
-    padding: 0 20px !important
-
-  .logo
-    width: 45% !important
-    margin-left: 20px !important
-
-  .aboutUsTitle
-    font-size: 30px !important
-    margin-bottom: 50px !important
-
-  .aboutUsDes
-    font-size: 18px !important
-    line-height: 35px !important
 
 @media (max-width: 1200px)
-  .aboutUsDes
-    font-size: 16px !important
+  .aboutUs
+    .container
+      div
+        p
+          margin-inline-end: 100px
 
 @media (max-width: 1000px)
-  .aboutUsDes
-    font-size: 15px !important
-    line-height: 20px !important
-
-  .logo
-    width: 40% !important
-
-@media (max-width: 820px)
-  .aboutUsTitle
-    font-size: 24px !important
-
-  .aboutUsDes
-    font-size: 14px !important
-    line-height: 20px !important
-
-  .logo
-    width: 50% !important
-
-@media (max-width: 720px)
   .aboutUs
-    flex-direction: column
-    margin-top: 70px !important
+    .container
+      h2
+        text-align: center
+      div
+        width: 100%
+        flex-direction: column
+        margin-top: 70px !important
+        p
+          width: 100%
+          margin-inline-end: 0
+          margin-top: 50px
 
-    .logo
-      width: 80%
+        img
+          width: 70%
+          margin: auto
 
-    .aboutUsDes
-      width: 100%
-      margin-top: 40px
-      line-height: 30px !important
-      font-size: 22px

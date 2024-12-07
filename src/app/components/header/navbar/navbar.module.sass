@@ -1,6 +1,5 @@
 .navbar
   width: 60%
-  height: 80px
   position: fixed
   top: 5%
   left: 50%
@@ -9,37 +8,38 @@
   background-color: rgba(0, 0, 0, 0.8)
   display: flex
   align-items: center
-  justify-content: space-between
   margin: 0 auto
   color: white
   text-align: center
-  border-radius: 20px
-  padding: 0 50px
+  border-radius: 30px
+  padding: 25px 50px
 
-  .logo
+  img
     width: 90px
     height: 50px
 
-  .list
+  ul
     display: flex
     align-items: center
     list-style: none
+    flex: 1 0 0
+    justify-content: end
 
-    .listItems
-      font-size: 16px
+    li
       cursor: pointer
 
-      &:hover .listItem
+      &:hover a
         color: var(--primary-color)
 
       &:not(:last-child)
         margin-right: 30px
 
-      .listItem
+      a
         color: #ffffff
         text-decoration: none
         display: flex
         align-items: center
+        font-weight: bold
 
         &:hover
           color: var(--primary-color)
@@ -63,15 +63,15 @@
     align-items: end
     transition: right 0.5s ease-in-out
 
-    .logo
+    img
       margin-bottom: 50px
       align-self: center
 
-    .list
+    ul
       display: flex
       flex-direction: column
 
-      .listItems
+      li
         margin: 0 0 10px 0 !important
         align-self: end
         font-size: 18px !important
@@ -92,33 +92,38 @@
   .appeared
     right: -50%
 
-@media (max-width: 860px)
-  .listItems
-    padding: 15px 10px 15px 20px !important
+@media screen and (max-width: 860px)
+  .navbar
+    ul
+      li
+        padding: 15px 10px 15px 20px !important
 
-  .listItem
-    font-size: 16px !important
+      a
+        font-size: 16px !important
 
 @media (max-width: 700px)
   .navbar
     width: 40% !important
+    ul
+      li
+        padding: 10px !important
 
-  .listItems
-    padding: 10px !important
-
-  .listItem
-    font-size: 14px !important
+      a
+        font-size: 14px !important
 
 @media (max-width: 480px)
   .navbar
     width: 50% !important
-
-  .listItem
-    font-size: 12px !important
+    ul
+      li
+        a
+          font-size: 12px !important
 
 @media (max-width: 450px)
   .navbar
     width: 60% !important
 
-  .listItem
-    font-size: 12px !important
+    ul
+      li
+        a
+          font-size: 12px !important
