@@ -1,9 +1,10 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import styles from './FAQ.module.sass';
 import Button from "@mui/material/Button";
+import Container from "@/app/components/container";
 
 function FAQ() {
     const [visibleId, setVisibleId] = useState(null);
@@ -108,7 +109,7 @@ function FAQ() {
     ];
     const dataLength = showMore ? faqs : faqs.slice(0, 5);
 
-    const toggleAnswer = (id:any) => {
+    const toggleAnswer = (id: any) => {
         setVisibleId(prevId => (prevId === id ? null : id));
     };
 
@@ -118,43 +119,32 @@ function FAQ() {
 
     return (
         <div className={styles.FAQ} id="FAQ" dir="rtl">
-            <h1 className={styles.FQTitle}>سوالات متداول</h1>
-            <ul>
-                {dataLength.map(faq => (
-                    <li key={faq.id} className={styles.faqItem}>
-                        <div className={styles.questionContainer} onClick={() => toggleAnswer(faq.id)}>
-                            <p className={styles.question}>
-                                <span style={{ color: 'var(--primary-color)', marginLeft: '3px' }}>{faq.id}.</span>
-                                {faq.question}
-                                <KeyboardArrowDownIcon
-                                    style={{ color: 'var(--primary-color)'}}
-                                    className={`${styles.icon} ${visibleId === faq.id ? styles.iconRotated : ''}`}
-                                />
-                            </p>
-                        </div>
-                        {visibleId === faq.id && <p className={styles.answer}>{faq.answer}</p>}
-                    </li>
-                ))}
-            </ul>
-            <Button
-                onClick={toggleShowMore}
-                variant="contained"
-                sx={{
-                    width: "15%",
-                    fontSize: "18px",
-                    backgroundColor: 'var(--primary-color)',
-                    color: '#ffffff',
-                    margin: '50px 0 0 40px',
-                    padding: '10px 30px',
-                    transition: 'transform 0.3s ease',
-                    '&:hover': {
-                        backgroundColor: '#d19700',
-                        transform: 'scale(1.05)',
-                    },
-                }}
-            >
-                {showMore ? 'نمایش کمتر...' : ' نمایش بیشتر...'}
-            </Button>
+            <Container className={styles.container}>
+                <h2 className={styles.FQTitle}>سوالات متداول</h2>
+                <ul>
+                    {dataLength.map(faq => (
+                        <li key={faq.id}>
+                            <div onClick={() => toggleAnswer(faq.id)}>
+                                <p>
+                                    <span style={{color: 'var(--primary-color)', marginLeft: '3px'}}>{faq.id}.</span>
+                                    {faq.question}
+                                    <KeyboardArrowDownIcon
+                                        style={{color: 'var(--primary-color)'}}
+                                        className={`${styles.icon} ${visibleId === faq.id ? styles.iconRotated : ''}`}
+                                    />
+                                </p>
+                            </div>
+                            {visibleId === faq.id && <p className={styles.answer}>{faq.answer}</p>}
+                        </li>
+                    ))}
+                </ul>
+                <Button
+                    onClick={toggleShowMore}
+                    variant="contained"
+                >
+                    {showMore ? 'نمایش کمتر...' : ' نمایش بیشتر...'}
+                </Button>
+            </Container>
         </div>
     );
 }

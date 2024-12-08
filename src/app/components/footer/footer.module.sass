@@ -1,29 +1,57 @@
 .footerContainer
   background-color: #0c0c0c
-  display: flex
-  align-items: center
-  justify-content: space-between
-  padding: 50px 200px
+  padding-top: 50px
 
-  .map
-    width: 380px
-    height: 380px
-    border-radius: 50%
-
-  .information
+  .container
     display: flex
+    align-items: center
+    .map
+      width: 380px
+      height: 380px
+      border-radius: 50%
 
-    .informationList
-      list-style: none
-      &:not(:last-child)
-        margin-inline-end: 100px
+    .info
+      display: flex
+      flex: 1 0 0
+      margin-inline-end: 200px
 
+      ul
+        list-style: none
 
-      .informationItems
         &:not(:last-child)
-          margin-bottom: 5px
+          margin-inline-end: 100px
 
-      .informationHeader
-        font-weight: 900
-        font-size: 20px
-        margin-bottom: 20px
+
+        li
+          &:not(:last-child)
+            margin-bottom: 5px
+
+          &:first-child
+            font-weight: 900
+            font-size: 20px
+            margin-bottom: 20px
+
+  section
+    width: 100%
+    background-color: rgba(54, 54, 54, 0.2)
+    padding: 20px 0
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 20px
+
+@media (max-width: 1300px)
+  .footerContainer
+    .container
+      flex-direction: column
+      align-items: center
+      .info
+        margin-inline-end: 0
+        margin-top: 50px
+
+@media (max-width: 600px)
+  .footerContainer
+    .container
+      .info
+        ul:nth-child(2)
+          display: none

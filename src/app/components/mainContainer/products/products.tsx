@@ -24,7 +24,7 @@ function Products() {
 
     return (
         <main className={styles.productsSection} id="product">
-            <Container className={styles.contaienr}>
+            <Container className={styles.container}>
                 <h2>محصولات</h2>
                 <ul>
                     {displayedCars.map((car, index) => (
@@ -32,15 +32,12 @@ function Products() {
                             key={index}
                             onClick={() => handleProductClick(car)}
                         >
-                            <div className={styles.imageWrapper}>
-                                <Image
-                                    src={car.src}
-                                    alt={car.name}
-                                    layout="fill"
-                                    objectFit="cover"
-                                    className={styles.productImage}
-                                />
-                            </div>
+                            <Image
+                                src={car.src}
+                                alt={car.name}
+                                width={300}
+                                height={300}
+                            />
 
                             <div className={styles.overlay}>
                                 <h3 className={styles.productName}>{car.name}</h3>
@@ -53,7 +50,7 @@ function Products() {
                     onClick={toggleShowMore}
                     variant="contained"
                 >
-                    {showMore ? '...نمایش کمتر' : ' ...نمایش بیشتر'}
+                    {showMore ? '...نمایش کمتر محصولات' : ' ...نمایش بیشتر محصولات'}
                 </Button>
             </Container>
         </main>
