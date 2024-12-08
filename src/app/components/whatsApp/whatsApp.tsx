@@ -8,7 +8,7 @@ function WhatsApp() {
 
     return (
             <a href="https://wa.me/+989961610863" className={styles.whatsApp}>
-                <Image src="/images/WhatsApp-Logo.wine.svg" alt="WhatsApp" width={150} height={150} />
+                <Image src="/images/WhatsApp-Logo.wine.svg" alt="WhatsApp" width={130} height={130} />
             </a>
     );
 }

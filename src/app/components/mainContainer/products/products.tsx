@@ -6,9 +6,10 @@ import styles from './products.module.sass';
 import Button from '@mui/material/Button';
 import carData from '@/app/data/cars';
 import Container from "@/app/components/container";
+import ProductDetails from "@/app/components/mainContainer/products/productDetails/productDetails";
 
 function Products() {
-    const [ShowProduct, setShowProduct] = useState(false);
+    const [showProduct, setShowProduct] = useState(false);
     const [showMore, setShowMore] = useState(false);
     const [selectedCar, setSelectedCar] = useState(null);
 
@@ -16,9 +17,9 @@ function Products() {
     const toggleShowMore = () => setShowMore(!showMore);
     const displayedCars = showMore ? carData : carData.slice(0, 6);
 
-    function handleProductClick(product: any) {
+    function handleProductClick(product:any) {
         setSelectedCar(product);
-        setShowProduct(!ShowProduct)
+        setShowProduct(true);
     }
 
 
@@ -35,8 +36,8 @@ function Products() {
                             <Image
                                 src={car.src}
                                 alt={car.name}
-                                width={300}
-                                height={300}
+                                width={800}
+                                height={800}
                             />
 
                             <div className={styles.overlay}>
@@ -53,6 +54,7 @@ function Products() {
                     {showMore ? '...نمایش کمتر محصولات' : ' ...نمایش بیشتر محصولات'}
                 </Button>
             </Container>
+            <ProductDetails selectedCar={selectedCar} showProduct={showProduct} setShowProduct={setShowProduct} />
         </main>
     );
 }

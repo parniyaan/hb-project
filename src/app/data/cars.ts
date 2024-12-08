@@ -9,6 +9,7 @@ const cars = [
             "/images/kmc/1-1.jpg",
             "/images/kmc/1-2.jpg",
             "/images/kmc/1-3.jpg",
+            "/images/kmc/1-4.jpg",
         ],
     },
     {
@@ -17,41 +18,77 @@ const cars = [
         description: "قدرت و دوام بالا، مناسب برای آفرود و کارهای سنگین",
         information: "تویوتا هایلوکس با قدرت و دوام بالا، گزینه‌ای ایده‌آل برای آفرود و کارهای سنگین است. لوازم جانبی آفرود ما به گونه‌ای طراحی شده‌اند که امنیت و راحتی شما را در سفرهای سخت تضمین کنند. ما از بهترین مواد اولیه برای تولید لوازم خود استفاده می‌کنیم تا تجربه‌ای عالی را فراهم کنیم.",
         slug: "toyota-hilux",
+        images: [
+            "/images/kmc/1-1.jpg",
+            "/images/kmc/1-2.jpg",
+            "/images/kmc/1-3.jpg",
+            "/images/kmc/1-4.jpg",
+        ],
     },
     {
         name: "Wingle",
         src: "/images/products-Images/Wingle.jpg",
         description: "کیفیت ساخت بالا و مصرف سوخت مناسب، انتخاب اقتصادی",
         information: "وینگل با طراحی اقتصادی و کیفیت ساخت بالا، بهترین گزینه برای مصرف‌کنندگان هوشمند است. ما با تولید لوازم جانبی آفرود با کیفیت، اطمینان حاصل می‌کنیم که سفرهای شما ایمن و بهینه باشد. تجربه‌ای بی‌نظیر از کیفیت و عملکرد را با محصولات ما تجربه کنید.",
-        slug: "wingle"
+        slug: "wingle",
+        images: [
+            "/images/kmc/1-1.jpg",
+            "/images/kmc/1-2.jpg",
+            "/images/kmc/1-3.jpg",
+            "/images/kmc/1-4.jpg",
+        ],
     },
     {
         name: "Nissan Pickup",
         src: "/images/products-Images/Nissan Pickup.jpg",
         description: "عملکرد قوی و دوام بالا، گزینه‌ای محبوب در خودروهای تجاری",
         information: "پیکاپ نیسان با عملکرد قوی و دوام بالا، یک گزینه محبوب در خودروهای تجاری است. با لوازم جانبی آفرود ما، می‌توانید از دوام و قابلیت اطمینان بیشتری در سفرهای خود بهره‌مند شوید. ما از مواد با کیفیت برای تولید محصولات خود استفاده می‌کنیم تا شما را در مسیرهای دشوار همراهی کنیم.",
-        slug: "nissan-pickup"
+        slug: "nissan-pickup",
+        images: [
+            "/images/kmc/1-1.jpg",
+            "/images/kmc/1-2.jpg",
+            "/images/kmc/1-3.jpg",
+            "/images/kmc/1-4.jpg",
+        ],
     },
     {
         name: "Capra",
         src: "/images/products-Images/Capra.jpg",
         description: "نسخه بهبودیافته با امکانات بیشتر و مناسب برای مسیرهای سخت و آفرود",
         information: "کپر یک نسخه بهبودیافته است که برای مسیرهای چالشی طراحی شده است. با لوازم جانبی آفرود با کیفیت ما، می‌توانید به راحتی از چالش‌های طبیعی عبور کنید. ما به استفاده از مواد باکیفیت متعهد هستیم تا سفرهای شما را ایمن و لذت‌بخش کنیم.",
-        slug: "capra"
+        slug: "capra",
+        images: [
+            "/images/kmc/1-1.jpg",
+            "/images/kmc/1-2.jpg",
+            "/images/kmc/1-3.jpg",
+            "/images/kmc/1-4.jpg",
+        ],
     },
     {
         name: "Amico Asena",
         src: "/images/products-Images/Amico Asena.jpg",
         description: "دو دیفرانسیل با طراحی مدرن و امکانات رفاهی بالا",
         information: "آمیگو آسنای با طراحی مدرن، گزینه‌ای عالی برای آفرود است. لوازم جانبی ما به گونه‌ای طراحی شده‌اند که راحتی و ایمنی را برای شما به ارمغان بیاورند. با استفاده از بهترین مواد، می‌توانید به محصولات ما اعتماد کنید.",
-        slug: "amico-asena"
+        slug: "amico-asena",
+        images: [
+            "/images/kmc/1-1.jpg",
+            "/images/kmc/1-2.jpg",
+            "/images/kmc/1-3.jpg",
+            "/images/kmc/1-4.jpg",
+        ],
     },
     {
         name: "Kalut",
         src: "/images/products-Images/Kalut.jpg",
         description: "پیکاپ اقتصادی مناسب برای استفاده تجاری و باربری",
         information: "کالات یک پیکاپ اقتصادی است که برای استفاده تجاری بهینه شده است. با لوازم جانبی آفرود ما، می‌توانید از قابلیت‌های بیشتری در سفرهای خود بهره‌مند شوید. ما از مواد باکیفیت استفاده می‌کنیم تا به شما اطمینان خاطر بدهیم.",
-        slug: "kalut"
+        slug: "kalut",
+        images: [
+            "/images/kmc/1-1.jpg",
+            "/images/kmc/1-2.jpg",
+            "/images/kmc/1-3.jpg",
+            "/images/kmc/1-4.jpg",
+        ],
     },
     {
         name: "Foton",
@@ -69,21 +106,39 @@ const cars = [
         src: "/images/products-Images/Isuzu.jpg",
         description: "ساختار محکم با عملکرد بالا برای باربری‌های سنگین و شرایط سخت",
         information: "ایسوزو با ساختاری محکم و عملکرد بالا، بهترین انتخاب برای باربری‌های سنگین است. با لوازم جانبی آفرود ما، شما می‌توانید در سخت‌ترین شرایط به راحتی سفر کنید. کیفیت بالای مواد به شما اطمینان می‌دهد.",
-        slug: "isuzu"
+        slug: "isuzu",
+        images: [
+            "/images/kmc/1-1.jpg",
+            "/images/kmc/1-2.jpg",
+            "/images/kmc/1-3.jpg",
+            "/images/kmc/1-4.jpg",
+        ],
     },
     {
         name: "Pride Vanet",
         src: "/images/products-Images/Pride vanet.jpg",
         description: "خودروی اقتصادی و مناسب برای حمل و نقل بار",
         information: "پراید ونت یک خودروی اقتصادی است که به طور خاص برای حمل و نقل بار طراحی شده است. لوازم جانبی آفرود ما به شما کمک می‌کند تا در باربری‌های خود ایمنی و کارایی بیشتری داشته باشید. ما از مواد باکیفیت استفاده می‌کنیم تا سفرهای شما را آسان‌تر کنیم.",
-        slug: "pride-vanet"
+        slug: "pride-vanet",
+        images: [
+            "/images/kmc/1-1.jpg",
+            "/images/kmc/1-2.jpg",
+            "/images/kmc/1-3.jpg",
+            "/images/kmc/1-4.jpg",
+        ],
     },
     {
         name: "Arisan",
         src: "/images/products-Images/Arisan.jpg",
         description: "وانت سبک شهری با طراحی مناسب برای کارهای روزمره",
         information: "آریسان با طراحی مناسب برای کارهای روزمره، گزینه‌ای عالی برای حمل و نقل بارهای سبک در شهر است. لوازم جانبی آفرود ما به شما این امکان را می‌دهد که از کارایی و ایمنی بیشتری در مسیرهای شهری و جاده‌ای برخوردار شوید. ما از مواد باکیفیت در تولید محصولات خود استفاده می‌کنیم.",
-        slug: "arisan"
+        slug: "arisan",
+        images: [
+            "/images/kmc/1-1.jpg",
+            "/images/kmc/1-2.jpg",
+            "/images/kmc/1-3.jpg",
+            "/images/kmc/1-4.jpg",
+        ],
     }
 ];
 
