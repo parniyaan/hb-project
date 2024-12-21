@@ -1,29 +1,40 @@
-import 'leaflet/dist/leaflet.css';
-import {MapContainer, TileLayer, Marker} from 'react-leaflet';
-import L from 'leaflet';
+"use client";
+
+import { MapContainer, Marker, TileLayer } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import "leaflet-defaulticon-compatibility";
+import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
+import React, { useEffect, useRef } from "react";
 import styles from "./map.module.sass";
-import React from "react";
 
 function Map() {
-    const position: [number, number] = [35.633931, 50.968348];
+    const posix: [number, number] = [35.633931, 50.968348];
+    const zoom = 14;
+    const isInitialized = useRef(false);
 
-    const markerIcon = new L.Icon({
-        iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
-        iconSize: [25, 41],
-        iconAnchor: [12, 41],
-        popupAnchor: [1, -34],
-        shadowSize: [41, 41],
-    });
+    useEffect(() => {
+        isInitialized.current = true;
+        return () => {
+            isInitialized.current = false;
+        };
+    }, []);
+
+    if (!isInitialized.current) return null;
 
     return (
-        <MapContainer center={position} zoom={13} className={styles.map}>
+        <MapContainer
+            center={posix}
+            zoom={zoom}
+            scrollWheelZoom={false}
+            className={styles.map}
+        >
             <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={position}/>
+            <Marker position={posix} draggable={false} />
         </MapContainer>
-    )
+    );
 }
 
 export default Map;

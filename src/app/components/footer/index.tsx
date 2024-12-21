@@ -3,15 +3,25 @@
 import React from 'react';
 import styles from './footer.module.sass';
 import Container from "@/app/components/container";
-import Map from "./map";
+import {useMemo,} from "react";
+import dynamic from "next/dynamic";
 
 function Footer() {
+
+    const Map = useMemo(() => dynamic(
+        () => import('@/app/components/footer/map'),
+        {
+            loading: () => <p>map is loading</p>,
+            ssr: false
+        }
+    ), [])
 
 
     return (
         <footer id="footer" className={styles.footerContainer}>
             <Container className={styles.container}>
-                <Map/>
+                <Map />
+
                 <div dir="rtl" className={styles.info}>
                     <ul>
                         <li>منوی سایت</li>
