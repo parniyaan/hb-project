@@ -27,7 +27,7 @@ function Services() {
     ];
 
     return (
-        <main className={styles.services}>
+        <main id="services" className={styles.services}>
             <Container className={styles.container}>
                 <h2>خدمات</h2>
                 <ul>

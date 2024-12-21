@@ -6,7 +6,7 @@ import styles from './products.module.sass';
 import Button from '@mui/material/Button';
 import carData from '@/app/data/cars';
 import Container from "@/app/components/container";
-import ProductDetails from "@/app/components/mainContainer/products/productDetails/productDetails";
+import Index from "@/app/components/mainContainer/products/productDetails";
 
 function Products() {
     const [showProduct, setShowProduct] = useState(false);
@@ -54,7 +54,7 @@ function Products() {
                     {showMore ? '...نمایش کمتر محصولات' : ' ...نمایش بیشتر محصولات'}
                 </Button>
             </Container>
-            <ProductDetails selectedCar={selectedCar} showProduct={showProduct} setShowProduct={setShowProduct} />
+            <Index selectedCar={selectedCar} showProduct={showProduct} setShowProduct={setShowProduct} />
         </main>
     );
 }

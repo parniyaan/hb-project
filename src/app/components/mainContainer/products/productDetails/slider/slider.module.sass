@@ -1,0 +1,69 @@
+.slider
+  align-items: center
+  justify-content: center
+  position: relative
+
+  div
+    &:first-child
+      display: flex
+      align-items: center
+      width: 100%
+
+      img
+        //width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+
+    &:last-child
+      position: absolute
+      top: 50%
+      width: 100%
+      transform: translateY(-50%)
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+      span
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 50px
+        height: 50px
+        border-radius: 50%
+        background-color: rgba(0, 0, 0, .5)
+
+        &:hover
+          background-color: rgba(0, 0, 0, .7)
+          transition: background-color .2s ease-in
+
+        &:nth-of-type(1)
+          margin-right: 10px
+
+        &:nth-of-type(2)
+          margin-left: 10px
+
+        .icons
+          display: flex
+          align-items: center
+          justify-content: center
+          width: 50px
+          height: 50px
+          cursor: pointer
+
+@media screen and (max-width: 1600px)
+  .slider
+    div:first-child
+      img
+        width: 100% !important
+        height: 430px !important
+
+@media screen and (max-width: 1300px)
+  .slider
+    div:first-child
+      img
+        width: 100% !important
+        height: 600px !important
+        //object-position: 0
+
+

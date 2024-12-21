@@ -5,10 +5,6 @@
   .container
     display: flex
     align-items: center
-    .map
-      width: 380px
-      height: 380px
-      border-radius: 50%
 
     .info
       display: flex
@@ -20,7 +16,6 @@
 
         &:not(:last-child)
           margin-inline-end: 100px
-
 
         li
           &:not(:last-child)
@@ -73,5 +68,16 @@
   .footerContainer
     .container
       .info
-        ul:nth-child(2)
-          display: none
+        ul
+          &:nth-of-type(3)
+           margin-inline-start: 50px
+           border: 1px solid red !important
+
+          &:first-child
+            margin-inline-end: 0
+
+          &:nth-child(2)
+            display: none
+
+
+
