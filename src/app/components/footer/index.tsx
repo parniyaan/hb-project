@@ -6,12 +6,13 @@ import Container from "@/app/components/container";
 import {useMemo,} from "react";
 import dynamic from "next/dynamic";
 
+
 function Footer() {
 
     const Map = useMemo(() => dynamic(
         () => import('@/app/components/footer/map'),
         {
-            loading: () => <p>map is loading</p>,
+            // loading: () => <p>map is loading</p>,
             ssr: false
         }
     ), [])

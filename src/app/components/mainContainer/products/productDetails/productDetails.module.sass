@@ -67,7 +67,7 @@
 
         .proList
           position: absolute
-          top: 32%
+          top: 33%
           display: grid
           grid-template-columns: repeat(2, 150px)
           grid-template-rows: repeat(4, 50px)
@@ -154,6 +154,7 @@
     .content
       .information
         flex-direction: column
+        align-items: center
 
         .carDescription
           margin-right: 0
@@ -173,8 +174,6 @@
   .product
     .content
       .information
-        flex-direction: column
-
         .carDescription
           margin-right: 0
           width: 100%
@@ -184,5 +183,36 @@
               width: 100%
 
 @media screen and (max-width: 800px)
- .product
-   height: 160vh
+  .product
+    width: 100% !important
+    height: 160vh !important
+    padding: 50px !important
+
+    .content
+      width: 100% !important
+
+      .information
+        margin: 0 !important
+        width: 100% !important
+
+        .carDes
+          width: 100% !important
+          .carDesContent
+            width: 100% !important
+
+        .productProperties
+          width: 80% !important
+          margin: auto !important
+          margin-top: 20px !important
+
+          .productList
+            margin: auto
+
+            li
+              padding: 0 5px !important
+              height: auto
+
+            h4
+              font-size: 12px
+            h5
+              font-size: 8px

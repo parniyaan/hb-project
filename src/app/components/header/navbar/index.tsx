@@ -1,6 +1,5 @@
 "use client"
 
-import Link from 'next/link';
 import Image from 'next/image';
 import styles from './navbar.module.sass';
 import React from 'react';
@@ -17,7 +16,7 @@ function Navbar({burgerMenu}: { burgerMenu: any }) {
             <Image src='/images/logo.png' alt="logo" className={styles.logo} width={100} height={100}/>
             <ul>
                 <li>
-                    <a href="#blog">FAQ</a>
+                    <a href="#FAQ">FAQ</a>
                     <NotesIcon className={styles.menuIcons}/>
                 </li>
                 <li>
