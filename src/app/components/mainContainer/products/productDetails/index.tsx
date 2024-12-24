@@ -81,7 +81,6 @@ function ProductsDetails({ selectedCar, showProduct, setShowProduct }: {
                                     </ul>
                                 </div>
                             </>
-
                     </div>
                 </div>
             </div>
